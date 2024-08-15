@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- res/layout/fragment_buy_ticket.xml -->
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewmodel" type="com.example.fortunes.viewmodel.YourTicketViewModel" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            >
+
+            <!-- Toolbar -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/buy_ticket_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <!-- Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/buy_ticket_toolbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+
+                <TextView
+                    android:id="@+id/text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_lottery_ticket"
+                    android:textSize="@dimen/text_size_xlarge"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_ticket_instructions"
+                    android:textSize="@dimen/text_size_medium"
+                    />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ticket_numbers_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    >
+
+                    <TextView
+                        android:id="@+id/item1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:layout_marginEnd="@dimen/margin_small"
+                        android:text="@{String.valueOf(viewmodel.lotteryTicket.getNumber1())}"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorLightBlue"
+                        android:background="@drawable/circle_background_outline_blue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                    <TextView
+                        android:id="@+id/item2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:text="@{String.valueOf(viewmodel.lotteryTicket.getNumber2())}"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorLightBlue"
+                        android:background="@drawable/circle_background_outline_blue"
+                        app:layout_constraintStart_toEndOf="@id/item1"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/item3"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/item3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:text="@{String.valueOf(viewmodel.lotteryTicket.getNumber3())}"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorLightBlue"
+                        android:background="@drawable/circle_background_outline_blue"
+                        app:layout_constraintStart_toEndOf="@id/item2"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/item4"
+                        />
+
+                    <TextView
+                        android:id="@+id/item4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:text="@{String.valueOf(viewmodel.lotteryTicket.getNumber4())}"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorLightBlue"
+                        android:background="@drawable/circle_background_outline_blue"
+                        app:layout_constraintStart_toEndOf="@id/item3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/item5"
+                        />
+
+                    <TextView
+                        android:id="@+id/item5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:text="@{String.valueOf(viewmodel.lotteryTicket.getNumber5())}"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorLightBlue"
+                        android:background="@drawable/circle_background_outline_blue"
+                        app:layout_constraintStart_toEndOf="@id/item4"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/item6"
+                        />
+
+                    <TextView
+                        android:id="@+id/item6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:text="@{String.valueOf(viewmodel.lotteryTicket.getNumber6())}"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorLightBlue"
+                        android:background="@drawable/circle_background_outline_blue"
+                        app:layout_constraintStart_toEndOf="@id/item5"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/winning_numbers"
+                    android:textSize="@dimen/text_size_xlarge"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/winning_ticket_instructions"
+                    android:textSize="@dimen/text_size_medium"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/draw_numbers_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/corner_radius_large"
+                    app:cardElevation="4dp"
+                    android:layout_margin="@dimen/margin_small">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="2dp"
+                        >
+
+                        <!-- Header -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/item_header_background"
+                            >
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="8dp">
+
+                                <ImageView
+                                    android:id="@+id/icon"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/ic_generate"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:tint="@color/colorWhite" />
+
+                                <TextView
+                                    android:id="@+id/lotteryText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/margin_small"
+                                    android:layout_marginEnd="@dimen/margin_small"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/text_size_medium"
+                                    android:textStyle="bold"
+                                    android:text="@{viewmodel.lotteryDrawRandomlyPicked != null &amp;&amp; viewmodel.lotteryDrawRandomlyPicked.getId() != null ? viewmodel.getLotteryDrawNumber(viewmodel.lotteryDrawRandomlyPicked.getId()) : `x`}"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@id/drawDateText"
+                                    app:layout_constraintStart_toEndOf="@id/icon"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/drawDateText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{viewmodel.lotteryDrawRandomlyPicked != null &amp;&amp; viewmodel.lotteryDrawRandomlyPicked.getDrawDate() != null ? viewmodel.getFormattedDate(viewmodel.lotteryDrawRandomlyPicked.getDrawDate()) : `Invalid Date`}"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/text_size_small"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/lotteryText"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </LinearLayout>
+
+                        <!-- Content-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/padding_small"
+                            >
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/margin_medium"
+                                android:layout_marginBottom="@dimen/margin_medium"
+                                >
+
+                                <TextView
+                                    android:id="@+id/drawBall1"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:layout_marginEnd="@dimen/margin_small"
+                                    android:text="@{viewmodel.lotteryDrawRandomlyPicked.getNumber1()}"
+                                    android:textStyle="bold"
+                                    android:textColor="#FFFFFF"
+                                    android:background="@drawable/circle_background_blue"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/drawBall2"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:layout_marginStart="@dimen/margin_small"
+                                    android:text="@{String.valueOf(viewmodel.lotteryDrawRandomlyPicked.getNumber2())}"
+                                    android:textStyle="bold"
+                                    android:textColor="#FFFFFF"
+                                    android:background="@drawable/circle_background_blue"
+                                    app:layout_constraintStart_toEndOf="@id/drawBall1"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@id/drawBall3"
+                                    />
+
+
+                                <TextView
+                                    android:id="@+id/drawBall3"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:layout_marginStart="@dimen/margin_small"
+                                    android:text="@{String.valueOf(viewmodel.lotteryDrawRandomlyPicked.getNumber3())}"
+                                    android:textStyle="bold"
+                                    android:textColor="#FFFFFF"
+                                    android:background="@drawable/circle_background_blue"
+                                    app:layout_constraintStart_toEndOf="@id/drawBall2"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@id/drawBall4"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/drawBall4"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:layout_marginStart="@dimen/margin_small"
+                                    android:text="@{String.valueOf(viewmodel.lotteryDrawRandomlyPicked.getNumber4())}"
+                                    android:textStyle="bold"
+                                    android:textColor="#FFFFFF"
+                                    android:background="@drawable/circle_background_blue"
+                                    app:layout_constraintStart_toEndOf="@id/drawBall3"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@id/drawBall5"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/drawBall5"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:layout_marginStart="@dimen/margin_small"
+                                    android:text="@{String.valueOf(viewmodel.lotteryDrawRandomlyPicked.getNumber5())}"
+                                    android:textStyle="bold"
+                                    android:textColor="#FFFFFF"
+                                    android:background="@drawable/circle_background_blue"
+                                    app:layout_constraintStart_toEndOf="@id/drawBall4"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@id/drawBall6"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/drawBall6"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:gravity="center"
+                                    android:layout_marginStart="@dimen/margin_small"
+                                    android:text="@{String.valueOf(viewmodel.lotteryDrawRandomlyPicked.getNumber6())}"
+                                    android:textStyle="bold"
+                                    android:textColor="#FFFFFF"
+                                    android:background="@drawable/circle_background_blue"
+                                    app:layout_constraintStart_toEndOf="@id/drawBall5"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_chainStyle="spread"/>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="@dimen/margin_medium"
+                                android:background="@drawable/circle_background_outline_yellow"
+                                android:gravity="center"
+                                android:text="@{String.valueOf(viewmodel.lotteryDrawRandomlyPicked.getBonusBall())}"
+                                android:textColor="@color/colorGrey"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{String.valueOf(viewmodel.winnerStatus)}"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/text_size_large"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
