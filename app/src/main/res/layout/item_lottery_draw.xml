@@ -96,7 +96,7 @@
                         >
 
                         <TextView
-                            android:id="@+id/item1"
+                            android:id="@+id/ticket_ball_number_1"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:gravity="center"
@@ -111,7 +111,7 @@
                             />
 
                         <TextView
-                            android:id="@+id/item2"
+                            android:id="@+id/ticket_ball_number_2"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:gravity="center"
@@ -120,15 +120,15 @@
                             android:textStyle="bold"
                             android:textColor="#FFFFFF"
                             android:background="@drawable/circle_background_blue"
-                            app:layout_constraintStart_toEndOf="@id/item1"
+                            app:layout_constraintStart_toEndOf="@id/ticket_ball_number_1"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@id/item3"
+                            app:layout_constraintEnd_toStartOf="@id/ticket_ball_number_3"
                             />
 
 
                         <TextView
-                            android:id="@+id/item3"
+                            android:id="@+id/ticket_ball_number_3"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:gravity="center"
@@ -137,14 +137,14 @@
                             android:textStyle="bold"
                             android:textColor="#FFFFFF"
                             android:background="@drawable/circle_background_blue"
-                            app:layout_constraintStart_toEndOf="@id/item2"
+                            app:layout_constraintStart_toEndOf="@id/ticket_ball_number_2"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@id/item4"
+                            app:layout_constraintEnd_toStartOf="@id/ticket_ball_number_4"
                             />
 
                         <TextView
-                            android:id="@+id/item4"
+                            android:id="@+id/ticket_ball_number_4"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:gravity="center"
@@ -153,14 +153,14 @@
                             android:textStyle="bold"
                             android:textColor="#FFFFFF"
                             android:background="@drawable/circle_background_blue"
-                            app:layout_constraintStart_toEndOf="@id/item3"
+                            app:layout_constraintStart_toEndOf="@id/ticket_ball_number_3"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@id/item5"
+                            app:layout_constraintEnd_toStartOf="@id/ticket_ball_number_5"
                             />
 
                         <TextView
-                            android:id="@+id/item5"
+                            android:id="@+id/ticket_ball_number_5"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:gravity="center"
@@ -169,14 +169,14 @@
                             android:textStyle="bold"
                             android:textColor="#FFFFFF"
                             android:background="@drawable/circle_background_blue"
-                            app:layout_constraintStart_toEndOf="@id/item4"
+                            app:layout_constraintStart_toEndOf="@id/ticket_ball_number_4"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@id/item6"
+                            app:layout_constraintEnd_toStartOf="@id/ticket_ball_number_6"
                             />
 
                         <TextView
-                            android:id="@+id/item6"
+                            android:id="@+id/ticket_ball_number_6"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:gravity="center"
@@ -185,7 +185,7 @@
                             android:textStyle="bold"
                             android:textColor="#FFFFFF"
                             android:background="@drawable/circle_background_blue"
-                            app:layout_constraintStart_toEndOf="@id/item5"
+                            app:layout_constraintStart_toEndOf="@id/ticket_ball_number_5"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -223,7 +223,7 @@
                             android:id="@+id/details_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/draw_details"
+                            android:text="@string/button_draw_details"
                             android:textColor="@color/colorLightBlue"
                             android:textSize="@dimen/text_size_small"
                             android:textAllCaps="false"

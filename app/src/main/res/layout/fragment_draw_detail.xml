@@ -48,14 +48,14 @@
                 />
 
             <TextView
-                android:id="@+id/id_text_view"
+                android:id="@+id/draw_number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/text_size_large"
                 android:text="@{String.valueOf(viewmodel.extractFirstDigits(lotteryDraw.getId()))}"
                 />
 
-
+            <!-- Lottery Draw Numbers -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                 >
 
                 <TextView
-                    android:id="@+id/item1"
+                    android:id="@+id/ballNumber1"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:gravity="center"
@@ -80,7 +80,7 @@
                     />
 
                 <TextView
-                    android:id="@+id/item2"
+                    android:id="@+id/ballNumber2"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:gravity="center"
@@ -89,15 +89,14 @@
                     android:textStyle="bold"
                     android:textColor="#FFFFFF"
                     android:background="@drawable/circle_background_blue"
-                    app:layout_constraintStart_toEndOf="@id/item1"
+                    app:layout_constraintStart_toEndOf="@id/ballNumber1"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/item3"
+                    app:layout_constraintEnd_toStartOf="@id/ballNumber3"
                     />
 
-
                 <TextView
-                    android:id="@+id/item3"
+                    android:id="@+id/ballNumber3"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:gravity="center"
@@ -106,14 +105,14 @@
                     android:textStyle="bold"
                     android:textColor="#FFFFFF"
                     android:background="@drawable/circle_background_blue"
-                    app:layout_constraintStart_toEndOf="@id/item2"
+                    app:layout_constraintStart_toEndOf="@id/ballNumber2"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/item4"
+                    app:layout_constraintEnd_toStartOf="@id/ballNumber4"
                     />
 
                 <TextView
-                    android:id="@+id/item4"
+                    android:id="@+id/ballNumber4"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:gravity="center"
@@ -122,14 +121,14 @@
                     android:textStyle="bold"
                     android:textColor="#FFFFFF"
                     android:background="@drawable/circle_background_blue"
-                    app:layout_constraintStart_toEndOf="@id/item3"
+                    app:layout_constraintStart_toEndOf="@id/ballNumber3"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/item5"
+                    app:layout_constraintEnd_toStartOf="@id/ballNumber5"
                     />
 
                 <TextView
-                    android:id="@+id/item5"
+                    android:id="@+id/ballNumber5"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:gravity="center"
@@ -138,14 +137,14 @@
                     android:textStyle="bold"
                     android:textColor="#FFFFFF"
                     android:background="@drawable/circle_background_blue"
-                    app:layout_constraintStart_toEndOf="@id/item4"
+                    app:layout_constraintStart_toEndOf="@id/ballNumber4"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/item6"
+                    app:layout_constraintEnd_toStartOf="@id/ballNumber6"
                     />
 
                 <TextView
-                    android:id="@+id/item6"
+                    android:id="@+id/ballNumber6"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:gravity="center"
@@ -154,7 +153,7 @@
                     android:textStyle="bold"
                     android:textColor="#FFFFFF"
                     android:background="@drawable/circle_background_blue"
-                    app:layout_constraintStart_toEndOf="@id/item5"
+                    app:layout_constraintStart_toEndOf="@id/ballNumber5"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -163,7 +162,7 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- Bonus -->
+            <!-- Bonus ball-->
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="40dp"

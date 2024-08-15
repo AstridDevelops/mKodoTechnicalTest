@@ -1,16 +1,27 @@
 <resources>
-    <string name="app_name">Fortunes</string>
-    <string name="main_activity_title">Lottery Draw of the Month</string>
-    <string name="main_activity_instructions">Feeling lucky? Check the draws below and see if you\'re our next millionaire!</string>
-    <string name="your_ticket_instructions">Here’s the exciting detail of your lottery ticket for this draw—check out the winning numbers, bonus ball, and jackpot prize to see how your ticket measures up!</string>
-    <string name="winning_ticket_instructions">The Bonus Ball plays a key role in determining additional prize winnings. Compare the winning numbers and bonus ball with your ticket to see if you have any matches. For any questions or further assistance, please visit our help section or contact our customer support. Best of luck!</string>
-    <string name="button_buy_ticket">Buy Lottery ticket</string>
-    <string name="draw_details">Details</string>
-    <string name="button_your_lottery_ticket">Your lottery ticket</string>
-    <string name="loading">Loading...</string>
-    <string name="numbers_will_appear_here">Numbers will appear here</string>
-    <string name="button_generate_new_numbers">Generate new numbers</string>
-    <string name="your_lottery_ticket">Your Lottery Ticket</string>
-    <string name="winning_numbers">Winning numbers</string>
+
+        <!-- Application Name -->
+        <string name="app_name">Fortunes</string>
+
+        <!-- Main Activity -->
+        <string name="main_title">Lottery Draw of the Month</string>
+        <string name="lottery_ticket_title">Your Lottery Ticket</string>
+
+        <!-- Ticket Instructions -->
+        <string name="your_ticket_instructions">Here’s the exciting detail of your lottery ticket for this draw—check out the winning numbers, bonus ball, and jackpot prize to see how your ticket measures up!</string>
+        <string name="winning_ticket_instructions">The Bonus Ball plays a key role in determining additional prize winnings. Compare the winning numbers and bonus ball with your ticket to see if you have any matches. For any questions or further assistance, please visit our help section or contact our customer support. Best of luck!</string>
+
+        <!-- Buttons -->
+        <string name="button_generate_new_numbers">Generate New Numbers</string>
+        <string name="button_your_ticket">Your Lottery Ticket</string>
+        <string name="button_draw_details">Details</string>
+
+        <!-- Content -->
+        <string name="numbers_placeholder">Numbers will appear here</string>
+        <string name="winning_numbers_title">Winning Numbers</string>
+        <string name="main_instructions">Feeling lucky? Check the draws below and see if you’re our next millionaire!</string>
+
+        <!-- Loading State -->
+        <string name="loading_message">Loading…</string>
 
 </resources>
