@@ -31,11 +31,10 @@ Testing
   Unit Testing: Focused on the YourTicketViewModel to ensure that the ViewModel's logic functions correctly in isolation. Unit tests verify that data manipulation and business logic are handled as expected.
   Integration Testing: Conducted for the MainActivity class to ensure that the activity's components work together correctly, providing a seamless user experience.
 
-Improvements: While the app is functional, there are areas for potential enhancement:
+Improvements: While the app is functional, there are areas for enhancement
+    Additional unit tests and integration tests : Expanding test coverage to include more components and scenarios
+    Implementing swipe gestures for screen navigation and animations
+    Implementing a mock server to simulate API interactions and local data storage
     Jet Compose (As I am more efficient in xml layouts, I have chosen this solution that is faster for me and let me focus on the essential tasks) 
-    Local data storage 
-    Mock Server 
-    Animations
-    Additional Unit and Integration Tests: Expanding test coverage to include more components and scenarios.
-    UI/UX Enhancements: Refinements to the user interface and experience based on user feedback.
+    UI/UX Enhancements: Refinements to the user interface and experience
     
